@@ -4,6 +4,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
+const userRoutes = require("./routes/user");
+
 env.config();
 
 // mongodb
@@ -14,6 +16,7 @@ mongoose
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     }
   )
   .then(() => {
@@ -21,6 +24,7 @@ mongoose
   });
 
 app.use(bodyParser.json());
+app.use("/api", userRoutes);
 
 app.get("/", (req, res, next) => {
   res.status(200).json({
