@@ -6,6 +6,10 @@
 .pnp.js
 .env
 
+#Local
+/uploads
+/src/uploads
+
 # testing
 /coverage
 
