@@ -8,7 +8,8 @@
 
 #Local
 /uploads
-/src/uploads
+/src/uploads/*
+!/src/uploads/.gitkeep
 
 # testing
 /coverage
