@@ -126,3 +126,38 @@
 }
 
 ```
+
+# `product/create api`
+
+```
+{
+    "product": {
+        "_id": "5fdaa4da4edacf2d5c25e5fb",
+        "name": "Realme X3 SuperZoom (Arctic White, 128 GB)  (8 GB RAM).",
+        "slug": "Realme-X3-SuperZoom-(Arctic-White-128-GB)-(8-GB-RAM).",
+        "price": 27999,
+        "quantity": 5,
+        "description": "The realme X3 Super Zoom smartphone is here to take your photography and videography a notch higher. With the 60x super zoom feature, you can zoom into your subject and capture the most stunning details clearly. What’s more, all your videos are going to look shake-free, thanks to the UIS and UIS Max Ultra Image Stabilization feature. Oh, and it also comes with a 120 Hz smooth display that will ensure that you get to have a wonderful visual experience.",
+        "productPictures": [
+            {
+                "_id": "5fdaa4da4edacf2d5c25e5fc",
+                "img": "3phaDJQ7L-flipkart-dashboard-small.png"
+            },
+            {
+                "_id": "5fdaa4da4edacf2d5c25e5fd",
+                "img": "Yb_J0XNSXT-15122020.PNG"
+            },
+            {
+                "_id": "5fdaa4da4edacf2d5c25e5fe",
+                "img": "6oL79Iar6k-flipkart-dashboard.png"
+            }
+        ],
+        "category": "5fd89f734a05500f148ff9f5",
+        "createdBy": "5fd53155c3b31524a04c6764",
+        "reviews": [],
+        "createdAt": "2020-12-17T00:22:50.040Z",
+        "updatedAt": "2020-12-17T00:22:50.040Z",
+        "__v": 0
+    }
+}
+```
