@@ -161,3 +161,27 @@
     }
 }
 ```
+
+# `cart/addtocart api`
+
+### one user one cart, insert particular product only once
+
+```
+{
+    "cart": {
+        "_id": "5fdc73c78357963484d42695",
+        "user": "5fd48df5c4c0c32c74de4319",
+        "cartItems": [
+            {
+                "quantity": 3,
+                "_id": "5fdc73c78357963484d42696",
+                "product": "5fdaa4da4edacf2d5c25e5fb",
+                "price": 27999
+            }
+        ],
+        "createdAt": "2020-12-18T09:17:59.826Z",
+        "updatedAt": "2020-12-18T09:17:59.826Z",
+        "__v": 0
+    }
+}
+```
