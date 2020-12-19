@@ -162,25 +162,31 @@
 }
 ```
 
-# `cart/addtocart api`
+# `cart/addtocart api [updated]`
 
-### one user one cart, insert particular product only once
+### one user one cart, insert product only once, update cart items by quantity
 
 ```
 {
     "cart": {
-        "_id": "5fdc73c78357963484d42695",
+        "_id": "5fdd738d4cea1902d4a24aa0",
         "user": "5fd48df5c4c0c32c74de4319",
         "cartItems": [
             {
                 "quantity": 3,
-                "_id": "5fdc73c78357963484d42696",
+                "_id": "5fdd743e4cea1902d4a24aa5",
+                "product": "5fdd71bb4cea1902d4a24a97",
+                "price": 18999
+            },
+            {
+                "quantity": 2,
+                "_id": "5fdd744d4cea1902d4a24aa6",
                 "product": "5fdaa4da4edacf2d5c25e5fb",
                 "price": 27999
             }
         ],
-        "createdAt": "2020-12-18T09:17:59.826Z",
-        "updatedAt": "2020-12-18T09:17:59.826Z",
+        "createdAt": "2020-12-19T03:29:17.042Z",
+        "updatedAt": "2020-12-19T03:32:29.351Z",
         "__v": 0
     }
 }
