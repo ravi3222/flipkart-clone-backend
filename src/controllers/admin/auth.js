@@ -46,13 +46,13 @@ exports.signin = (req, res) => {
           { _id: user.id, role: user.role },
           process.env.JWT_SECRET,
           {
-            expiresIn: "1h",
+            expiresIn: "1d",
           }
         );
 
         const { _id, firstName, lastName, email, role, fullName } = user;
 
-        res.cookie("token", token, { expiresIn: "1h" });
+        res.cookie("token", token, { expiresIn: "1d" });
         res.status(200).json({
           token,
           user: { _id, firstName, lastName, email, role, fullName },
