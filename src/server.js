@@ -11,6 +11,7 @@ const adminRoutes = require("./routes/admin/auth");
 const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const cartRoutes = require("./routes/cart");
+const initalDataRoutes = require("./routes/admin/initialData");
 
 env.config();
 
@@ -43,19 +44,20 @@ app.use("/api", adminRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api", cartRoutes);
+app.use("/api", initalDataRoutes);
 
-app.get("/", (req, res, next) => {
-  res.status(200).json({
-    message: "Hello from server",
-  });
-});
+// app.get("/", (req, res, next) => {
+//   res.status(200).json({
+//     message: "Hello from server",
+//   });
+// });
 
-app.post("/data", (req, res, next) => {
-  res.status(200).json({
-    message: req.body,
-  });
-});
+// app.post("/data", (req, res, next) => {
+//   res.status(200).json({
+//     message: req.body,
+//   });
+// });
 
-app.listen(process.env.PORT || 6000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
