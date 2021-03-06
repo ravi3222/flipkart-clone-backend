@@ -191,3 +191,32 @@
     }
 }
 ```
+
+# `page/create api`
+
+```
+{
+  _id: 604119114ae041120434ae78,
+  title: 'Apple Store',
+  description: 'Apple is an awesome brand.',
+  category: 5fd89f914a05500f148ff9f8,
+  banners: [
+    {
+      _id: 6042650c583d8c18ace709b3,
+      img: 'http://localhost:5000/public/VNNHMWtTj-9fddb61f281042c8.jpg',
+      navigateTo: '/bannerClicked?categoryId=5fd89f914a05500f148ff9f8&type=undefined'
+    }
+  ],
+  products: [
+    {
+      _id: 6042650c583d8c18ace709b4,
+      img: 'http://localhost:5000/public/RqQrWbmtbh-76e02b73a6fd5aa7.jpg',
+      navigateTo: '/productClicked?categoryId=5fd89f914a05500f148ff9f8&type=undefined'
+    }
+  ],
+  createdBy: 5fd53155c3b31524a04c6764,
+  createdAt: 2021-03-04T17:29:53.075Z,
+  updatedAt: 2021-03-05T17:06:20.920Z,
+  __v: 0
+}
+```

@@ -1,6 +1,7 @@
 const Page = require("../../models/page");
 
 exports.createPage = (req, res) => {
+  console.log("req", req.body, "req", req.files);
   const { banners, products } = req.files;
   if (banners.length > 0) {
     req.body.banners = banners.map((banner, index) => ({
@@ -15,15 +16,31 @@ exports.createPage = (req, res) => {
     }));
   }
 
-  res.body.createdBy = req.user._id;
+  req.body.createdBy = req.user._id;
 
-  const page = new Page(req.body);
-
-  page.save((error, page) => {
+  Page.findOne({ category: req.body.category }).exec((error, page) => {
     if (error) return res.status(400).json({ error });
     if (page) {
-      return res.status(201).json({ page });
+      // console.log("page from page.findOne if block", page);
+      Page.findOneAndUpdate({ category: req.body.category }, req.body).exec(
+        (error, updatedPage) => {
+          if (error) return res.status(400).json({ error });
+          if (updatedPage) {
+            console.log("updatedPage from page.findOne if block", updatedPage);
+
+            return res.status(201).json({ page: updatedPage });
+          }
+        }
+      );
+    } else {
+      const page = new Page(req.body);
+      console.log("page from page.findOne else block", page);
+      page.save((error, page) => {
+        if (error) return res.status(400).json({ error });
+        if (page) {
+          return res.status(201).json({ page });
+        }
+      });
     }
   });
-  res.status(200).json({ body: req.body });
 };
