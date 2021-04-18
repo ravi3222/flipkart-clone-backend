@@ -1,6 +1,10 @@
 const express = require("express");
 const { requireSignin, adminMiddleware } = require("../common-middleware");
-const { createProduct, getProductsBySlug } = require("../controllers/product");
+const {
+  createProduct,
+  getProductsBySlug,
+  getProductDetailsById,
+} = require("../controllers/product");
 const multer = require("multer");
 const router = express.Router();
 const shortid = require("shortid");
@@ -26,5 +30,6 @@ router.post(
 );
 
 router.get("/products/:slug", getProductsBySlug);
+router.get("/product/:productId", getProductDetailsById);
 
 module.exports = router;
